@@ -1,5 +1,6 @@
 <?php
 function get_suits($limit = null){
+    require 'db_connection.php';
     $pdo = get_connection();
 
     $query = 'SELECT * FROM suits';

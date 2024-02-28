@@ -1,7 +1,6 @@
 <?php
 require 'lib/functions.php';
 $suits = get_suits();
-$suits = array_reverse($suits);
 var_dump($suits);
 ?>
 
@@ -13,7 +12,10 @@ require 'layout/header.php';
                 <h2>Featured Suits</h2>
                 <?php foreach ($suits as $testsuit) { ?>
               <blockquote class="test">
-                <h2><?php echo $testsuit['name']?></h2>
+                <h2><?php echo $testsuit['id']?></h2>
+                <h2><?php echo $testsuit['suit_name']?></h2>
+                <h2><?php echo $testsuit['brand']?></h2>
+                <h2><?php echo $testsuit['price']?></h2>
               </blockquote>
               <?php }?>
         </div>

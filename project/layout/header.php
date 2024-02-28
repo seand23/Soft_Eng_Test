@@ -16,7 +16,7 @@
 
     <nav id="navbar">
         <a href="index.php">Home</a>
-        <a href="#">Suits</a>
+        <a href="store.php">Suits</a>
         <a href="#">About Us</a>
         <a href="#">Contact</a>
     </nav>

@@ -17,6 +17,7 @@ require 'layout/header.php';
                 <h2><?php echo $testsuit['brand']?></h2>
                 <h2><?php echo $testsuit['price']?></h2>
               </blockquote>
+              <img src="images/<?php echo $testsuit['image'];?>" class="image"/>
               <?php }?>
         </div>
     </main>

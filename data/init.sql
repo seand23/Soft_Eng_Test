@@ -11,3 +11,11 @@ CREATE TABLE users (
     address VARCHAR(80) NOT NULL,
     dateofpurchase TIMESTAMP
 );
+
+CREATE TABLE suits (
+	id int(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+    brand VARCHAR(30) NOT NULL,
+    name VARCHAR(20) NOT NULL,
+    price FLOAT(10) NOT NULL,
+    image VARCHAR(50) NOT NULL,
+);

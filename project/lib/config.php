@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'database_dsn' => 'mysql:dbname=NAME-OF-DB?;host=localhost',
+    'database_dsn' => 'mysql:dbname=suitdb;host=localhost',
     'database_user' => 'root',
-    'database_pass' => 'PASSWORD?'
+    'database_pass' => ''
 );

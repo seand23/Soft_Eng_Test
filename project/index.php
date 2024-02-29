@@ -1,11 +1,4 @@
 <?php
-require 'lib/functions.php';
-$suits = get_suits();
-$suits = array_reverse($suits);
-var_dump($suits);
-?>
-
-<?php
 require 'layout/header.php';
 ?>
     <main>

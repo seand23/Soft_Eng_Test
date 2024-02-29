@@ -1,15 +1,25 @@
 <?php
+require 'lib/functions.php';
+$suits = get_suits();
+var_dump($suits);
+?>
+
+<?php
 require 'layout/header.php';
 ?>
     <main>
         <div class="container">
-            <section class="featured-items">
                 <h2>Featured Suits</h2>
-                <div class="featured-suits">
-                    <img src="images/stock.jpg" alt="Featured suit 1">
-                    <img src="images/stock.jpg" alt="Featured suit 2">
-                </div>
-            </section>
+                <?php foreach ($suits as $testsuit) { ?>
+              <img src="images/<?php echo $testsuit['image'];?>" class="image"/>
+              <blockquote class="test">
+                <h2><?php echo $testsuit['id']?></h2>
+                <h2><?php echo $testsuit['suit_name']?></h2>
+                <h2><?php echo $testsuit['brand']?></h2>
+                <h2><?php echo $testsuit['price']?></h2>
+                <h2><?php echo $testsuit['image']?></h2>
+              </blockquote>
+              <?php }?>
         </div>
     </main>
 

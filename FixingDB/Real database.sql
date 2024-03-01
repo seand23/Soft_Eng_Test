@@ -2,7 +2,7 @@ use softeng;
 
 drop table if exists orders;
 drop table if exists supplier;
-drop table if exists suits;
+drop table if exists products;
 drop table if exists admins;
 drop table if exists users;
 
@@ -31,45 +31,25 @@ create table admins (
 );
 
 create table supplier (
+	supplierID int not null,
 	brandName varchar(255) not null,
     
-    primary key (brandName)
-);
-
-create table suits (
-	suitID int not null,
-    userID int,
-    adminID int,
-    suitName varchar(255),
-    price decimal (7,2),
-    brandName varchar(255) not null,
-    
-    
-    primary key (suitID),
-    foreign key (brandName) references supplier (brandName),
-    foreign key (userID) references users (userID),
-    foreign key (adminID) references admins (adminID)
+    primary key (supplierID)
 );
 
 create table products (
 	productID int not null,
     userID int,
     adminID int,
-    suitName varchar(255),
+    productName varchar(255),
     price decimal (7,2),
-    brandName varchar(255) not null,
+    supplierID int not null,
     
     
     primary key (productID),
-    foreign key (brandName) references supplier (brandName),
+    foreign key (supplierID) references supplier (supplierID),
     foreign key (userID) references users (userID),
     foreign key (adminID) references admins (adminID)
-);
-
-create table supplier (
-	brandName varchar(255) not null,
-    
-    primary key (brandName)
 );
 
 create table orders (
@@ -83,4 +63,10 @@ create table orders (
     foreign key (userID) references users (userID),
     foreign key (adminID) references admins (adminID)
 );
+
+select * from users;
+select * from admins;
+select * from supplier;
+select * from products;
+select * from orders;
 

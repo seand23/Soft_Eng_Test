@@ -78,18 +78,18 @@ VALUES
     (2, 'Admin2', 'admin2', 'admin2@example.com', 'adminpass2', '321 Maple St, County', '555-987-6543');
 
 -- Sample data for supplier table
-INSERT INTO supplier (brandName)
+INSERT INTO supplier (supplierID, companyName)
 VALUES 
-    ('Brand1'),
-    ('Brand2'),
-    ('Brand3');
+    (1, 'monster.inc'),
+    (2, 'gorilla.inc'),
+    (3, 'fuckknows.inc');
 
 -- Sample data for products table
-INSERT INTO products (productID, userID, adminID, productName, price, brandName)
+INSERT INTO products (productID, userID, adminID, productName, price, brandName, supplierID)
 VALUES 
-    (1, 1, 1, 'Product1', 19.99, 'Brand1'),
-    (2, 2, 1, 'Product2', 29.99, 'Brand2'),
-    (3, 1, 2, 'Product3', 39.99, 'Brand3');
+    (1, 1, 1, 'Product1', 19.99, 'Brand1', 1),
+    (2, 2, 1, 'Product2', 29.99, 'Brand2', 2),
+    (3, 1, 2, 'Product3', 39.99, 'Brand3', 3);
 
 -- Sample data for orders table
 INSERT INTO orders (orderID, totalPrice, datePurchase, userID, adminID)

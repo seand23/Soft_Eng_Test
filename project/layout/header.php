@@ -6,18 +6,14 @@
     <title>Blanch Suits</title>
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/nav.css">
+    
 </head>
-
-    <header>
-        <div class="header-container">
-            <h1>Blanch Suits</h1>
-        </div>
-    </header>
-
-    <nav id="navbar">
-        <a href="index.php">Home</a>
-        <a href="store.php">Suits</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
-    </nav>
 <body>
+        
+<nav>
+    <input type="text" placeholder="Search...">
+    <button type="submit">Search</button>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>

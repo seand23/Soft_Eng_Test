@@ -31,10 +31,9 @@ create table admins (
 );
 
 create table supplier (
-	supplierID int not null,
 	brandName varchar(255) not null,
     
-    primary key (supplierID)
+    primary key (brandName)
 );
 
 create table products (
@@ -43,11 +42,11 @@ create table products (
     adminID int,
     productName varchar(255),
     price decimal (7,2),
-    supplierID int not null,
+    brandName varchar(255) not null,
     
     
     primary key (productID),
-    foreign key (supplierID) references supplier (supplierID),
+    foreign key (brandName) references supplier (brandName),
     foreign key (userID) references users (userID),
     foreign key (adminID) references admins (adminID)
 );

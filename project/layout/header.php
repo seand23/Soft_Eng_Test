@@ -16,4 +16,7 @@
     <a href="#">Home</a>
     <a href="#">About</a>
     <a href="#">Contact</a>
+    <button><a href="#">LOGIN</a></button>
+    <button><a href="#">REGISTER</a></button>
+
 </nav>

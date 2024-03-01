@@ -16,3 +16,10 @@ function get_suits($limit = null){
 
     return $suits;
 }
+
+function updateSuit(){
+    require 'db_connection.php';
+    $pdo = get_connection();
+
+    
+}

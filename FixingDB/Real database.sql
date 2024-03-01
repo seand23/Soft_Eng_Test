@@ -7,7 +7,7 @@ drop table if exists admins;
 drop table if exists users;
 
 create table users (
-	userID int not null,
+	userID int NOT NULL AUTO_INCREMENT,
     name varchar(255),
 	username Varchar (255),
     email Varchar(255),
@@ -19,7 +19,7 @@ create table users (
 );
 
 create table admins (
-	adminID int not null,
+	adminID int NOT NULL AUTO_INCREMENT,
     name varchar(255),
 	username Varchar (255),
     email Varchar(255),
@@ -31,28 +31,30 @@ create table admins (
 );
 
 create table supplier (
-	brandName varchar(255) not null,
+	supplierID int NOT NULL AUTO_INCREMENT,
+	companyName varchar(255),
     
-    primary key (brandName)
+    primary key (supplierID)
 );
 
 create table products (
-	productID int not null,
+	productID int NOT NULL AUTO_INCREMENT,
     userID int,
     adminID int,
     productName varchar(255),
     price decimal (7,2),
-    brandName varchar(255) not null,
+    brandName varchar(255),
+    supplierID int NOT NULL,
     
     
     primary key (productID),
-    foreign key (brandName) references supplier (brandName),
+    foreign key (supplierID) references supplier (supplierID),
     foreign key (userID) references users (userID),
     foreign key (adminID) references admins (adminID)
 );
 
 create table orders (
-	orderID int not null,
+	orderID int NOT NULL AUTO_INCREMENT,
     totalPrice decimal (7,2),
     datePurchase timestamp,
     userId int,
@@ -62,6 +64,38 @@ create table orders (
     foreign key (userID) references users (userID),
     foreign key (adminID) references admins (adminID)
 );
+
+-- Sample data for users table
+INSERT INTO users (userID, name, username, email, password, address, phone)
+VALUES 
+    (1, 'John Doe', 'john_doe', 'john@example.com', 'password123', '123 Main St, City', '123-456-7890'),
+    (2, 'Jane Smith', 'jane_smith', 'jane@example.com', 'pass123', '456 Elm St, Town', '987-654-3210');
+
+-- Sample data for admins table
+INSERT INTO admins (adminID, name, username, email, password, address, phone)
+VALUES 
+    (1, 'Admin1', 'admin1', 'admin1@example.com', 'adminpass', '789 Oak St, Village', '555-123-4567'),
+    (2, 'Admin2', 'admin2', 'admin2@example.com', 'adminpass2', '321 Maple St, County', '555-987-6543');
+
+-- Sample data for supplier table
+INSERT INTO supplier (brandName)
+VALUES 
+    ('Brand1'),
+    ('Brand2'),
+    ('Brand3');
+
+-- Sample data for products table
+INSERT INTO products (productID, userID, adminID, productName, price, brandName)
+VALUES 
+    (1, 1, 1, 'Product1', 19.99, 'Brand1'),
+    (2, 2, 1, 'Product2', 29.99, 'Brand2'),
+    (3, 1, 2, 'Product3', 39.99, 'Brand3');
+
+-- Sample data for orders table
+INSERT INTO orders (orderID, totalPrice, datePurchase, userID, adminID)
+VALUES 
+    (1, 49.98, '2024-02-28 15:30:00', 1, 1),
+    (2, 29.99, '2024-02-29 10:45:00', 2, 1);
 
 select * from users;
 select * from admins;

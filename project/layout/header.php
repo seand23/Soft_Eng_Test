@@ -11,12 +11,15 @@
 <body>
         
 <nav>
+    <div class="search-bar">
     <input type="text" placeholder="Search...">
     <button type="submit">Search</button>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    </div>
+    <a href="index.php">Home</a>
+    <a href="store.php">Store</a>
+    <a href="admin.php">Contact</a>
+    <div class="login">
     <button><a href="#">LOGIN</a></button>
     <button><a href="#">REGISTER</a></button>
-
+    </div>
 </nav>

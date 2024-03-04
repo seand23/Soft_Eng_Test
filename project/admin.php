@@ -1,14 +1,14 @@
 <?php
 require 'lib/functions.php';
-    //check if form is submitted
+    // Check if form is submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        //rtrieve form data
+        // Retrieve form data
         $productName = $_POST['productName'];
         $price = $_POST['price'];
         $brandName = $_POST['brandName'];
         $supplierID = $_POST['supplierID'];
     
-        //call the addProduct function
+        // Call the addProduct function
         if (addProduct($productName, $price, $brandName, $supplierID)) {
             echo "Product added successfully.";
         } else {
@@ -36,7 +36,7 @@ require 'layout/header.php';
             <label for="brandName">Supplier ID: (See notes for supplier ID's)</label><br>
             <input type="text" id="supplierID" name="supplierID" required><br>
 
-            <!--add more fields here for additional product information -->
+            <!-- You may add more fields here for additional product information -->
 
             <input type="submit" value="Add Product">
         </form>

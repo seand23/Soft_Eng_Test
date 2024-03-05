@@ -1,20 +1,6 @@
 <?php
 require 'lib/functions.php';
-    // Check if form is submitted
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Retrieve form data
-        $productName = $_POST['productName'];
-        $price = $_POST['price'];
-        $brandName = $_POST['brandName'];
-        $supplierID = $_POST['supplierID'];
-    
-        // Call the addProduct function
-        if (addProduct($productName, $price, $brandName, $supplierID)) {
-            echo "Product added successfully.";
-        } else {
-            echo "Error: Unable to add product.";
-        }
-    }
+    productFormHandler();
 ?>
 
 <?php

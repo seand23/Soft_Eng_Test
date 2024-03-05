@@ -19,7 +19,7 @@
     <a href="store.php">Store</a>
     <a href="admin.php">Contact</a>
     <div class="login">
-    <button><a href="#">LOGIN</a></button>
-    <button><a href="#">REGISTER</a></button>
+    <button><a href="login.php">LOGIN</a></button>
+    <button><a href="signup.php">REGISTER</a></button>
     </div>
 </nav>

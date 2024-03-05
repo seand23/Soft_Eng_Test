@@ -1,7 +1,6 @@
 <?php
 require 'lib/functions.php';
 $suits = get_suits();
-var_dump($suits);
 ?>
 
 <?php

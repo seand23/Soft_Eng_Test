@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/shipping.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <script src="js/shipping.js"></script>
+    <title>Shipping</title>
+</head>
+<body>
+    <div>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="bx bx-menu"></i>
+            </label>
+            <label class="logo">Jumper</label>
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="contact">
+        <fieldset>
+        <form action="thankyou.html" class="confirm" id="confirm" method="post">
+            <h1>Shipping Details</h1> <br>
+            <input type="text" name="name" placeholder="Your Name"><br>
+            
+            <br><br>
+            <input type="email" name="email" placeholder="Your Email"><br>
+            
+            <br><br>
+            <input type="text" name="address1" placeholder="Address Line 1"><br>
+            
+            <br><br>
+            <input type="text" name="address2" placeholder="Address Line 2"><br>
+            
+            <br><br>
+            <input type="tel" name="phone" placeholder="Phone Number(#########)" pattern="[0-9]{2}-[0-9]{3}-[0-9]{4}" required>
+            <br><br>
+            <label for="msg">Delivery requests</label><br>
+            <textarea name="msg" id="" cols="40" rows="10" placeholder="Enter a request i.e leave parcel by door..."></textarea> <br>
+            <button type="submit" >Confirm</button>
+        </fieldset>
+        </form>
+       
+</body>
+</html>

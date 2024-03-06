@@ -1,0 +1,288 @@
+/* ------>   Root variables   <------ */
+:root {
+    --blue : #12d2db;
+    --white : #fcf2fa;
+    --purple : #912a7eaa;
+    --purple-blc : #230622dd;
+    --blc-cyan : #033a4d;
+    --cyan-blc : #0078a0;
+    --cyan-grey : rgb(12, 121, 121);
+    --shadow : o 5px 10px 5px rgba(0, 0, 0, .3);
+    --navColor : linear-gradient(to right, rgb(0, 221, 255)5%, rgba(6, 22, 35, 0.9));
+    --footerColor : linear-gradient(to right, rgb(0, 221, 255)5%, rgba(6, 22, 35, 0.9));
+    --prompt1 : rgb(144, 226, 242);
+    --prompt2 : rgb(241, 216, 248);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #033a4d;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ------>   Responsive Menu   <------ */
+
+nav {
+    top: 0;
+    background: var(--navColor);
+    box-shadow: var(--shadow);
+    height: 80px;
+    width: 100%;
+    position: sticky;
+}
+
+label.logo {
+    color: var(--white);
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 80px;
+    letter-spacing: -1px;
+    font-weight: 800;
+    font-style: italic;
+    transition: .2s ease;
+    text-shadow: 3px 5px 20px #230622aa;
+}
+
+nav ul {
+    float: right;
+    margin-right: 80px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+}
+
+nav ul li a {
+    color: var(--white);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 13px;
+    text-transform: lowercase;
+}
+
+a.active, a:hover {
+    background: var(--purple-blc);
+    transition: .5s;
+}
+
+/* ------>   checkbutton   <------ */
+.checkbtn {
+    line-height: 80px;
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    margin-right: 40px;
+    display: display;
+}
+
+.checkbtn i {
+    color: var(--white);
+    padding: 5px;
+    border-radius: 10px;
+    transition: .5s ease;
+}
+
+.checkbtn i:hover {
+    background: var(--purple-blc)
+}
+
+#check {
+    display: none;
+}
+
+section {
+    height: 50vh;
+    background-position: top;
+    background-size: cover;
+}
+
+/* ------>   Responsive  <------ */
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 25px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+     ul {
+        position: fixed; 
+        width: 100%;
+        height: 100vh;
+        background: var(--cyan-blc);
+        top: 80px;
+        left: -100%;
+        padding-top: 1rem;
+        text-align: center;
+        transition: .5s ease;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 30px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a.active, a:hover {
+        background: none;
+        color: var(--blue);
+        text-shadow: 0 10px 15px var(--blue);
+    }
+
+    #check:checked ~  ul {
+        left: 0;
+        height: 100vh;
+    }
+
+    .box {
+        display: none;
+    }
+
+}
+
+@media (max-width: 294px) {
+    label.logo {
+        display: none;
+    }
+}
+
+@media (max-height: 604px) {
+    .box {
+        display: none;
+    }
+}
+
+@media (max-height: 376px) {
+    footer {
+        display: none;
+    }
+}
+
+/* --> Footer <-- */
+footer {
+    
+    position: absolute;
+    bottom: 0;
+    background: var(--footerColor);
+    height: 100px;
+    width: 100%;
+    font-weight: 800;
+    font-style: italic;
+    text-shadow: 3px 5px 20px #230622aa;
+}
+
+
+
+
+
+
+/* ------>   Slide show animation   <------ */
+.box {
+
+    margin-top: 3rem;
+    
+    position: relative;
+    background: #000;
+    height: 58vh;
+    overflow: hidden;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    background-color: rgb(0 0 0/ 50%);
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation: cycle 20s infinite;
+}
+
+.slider-2 {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation: cycle 20s infinite;
+    animation-delay: 4s;
+}
+
+.slider-3 {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation: cycle 20s infinite;
+    animation-delay: 8s;
+}
+
+.slider-4 {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation: cycle 20s infinite;
+    animation-delay: 12s;
+}
+
+.slider-5 {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation: cycle 20s infinite;
+    animation-delay: 16s;
+}
+
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes cycle {
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    20% {opacity: 1; transform: scale(1.05);}
+    30% {opacity: 0; transform: scale(1.05);}
+    100% {opacity: 0;}
+}
+
+/* ------>   Prompt   <------ */
+.H-prompt {
+    text-align: center;
+    font-weight: 800;
+    text-shadow: -15px 10px 25px #230622aa;
+    color: var(--prompt1);
+}
+
+.P-prompt {
+    text-align: center;
+    font-weight: 800;
+    text-shadow: -15px 10px 25px #230622aa;
+    color: var(--prompt2);
+}
+
+a.home {
+    color: #0078a0;
+}

@@ -1,0 +1,341 @@
+/* ------>   Root variables   <------ */
+:root {
+    --blue : #12d2db;
+    --white : #fcf2fa;
+    --purple : #912a7eaa;
+    --purple-blc : #230622dd;
+    --blc-cyan : #033a4d;
+    --cyan-blc : #0078a0;
+    --cyan-blc2 : #002735;
+    --cyan-grey : rgb(12, 121, 121);
+    --shadow : o 5px 10px 5px rgba(0, 0, 0, .3);
+    --navColor : linear-gradient(to right, rgb(0, 221, 255)5%, rgba(6, 22, 35, 0.9));
+    --footerColor : linear-gradient(to right, rgb(0, 221, 255)5%, rgba(6, 22, 35, 0.9));
+    --prompt1 : rgb(144, 226, 242);
+    --prompt2 : rgb(241, 216, 248);
+    --promt2-shadow : rgb(241, 216, 248);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--blc-cyan);
+}
+
+/* ------>   Responsive Menu   <------ */
+
+nav {
+    top: 0;
+    background: var(--navColor);
+    box-shadow: var(--shadow);
+    height: 80px;
+    width: 100%;
+    position: sticky;
+}
+
+label.logo {
+    color: var(--white);
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 80px;
+    letter-spacing: -1px;
+    font-weight: 800;
+    font-style: italic;
+    transition: .2s ease;
+    text-shadow: 3px 5px 20px #230622aa;
+}
+
+nav ul {
+    float: right;
+    margin-right: 80px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+}
+
+nav ul li a {
+    color: var(--white);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 13px;
+    text-transform: lowercase;
+}
+
+a.active, a:hover {
+    background: var(--purple-blc);
+    transition: .5s;
+}
+
+/* ------>   checkbutton   <------ */
+.checkbtn {
+    line-height: 80px;
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    margin-right: 40px;
+    display: display;
+}
+
+.checkbtn i {
+    color: var(--white);
+    padding: 5px;
+    border-radius: 10px;
+    transition: .5s ease;
+}
+
+.checkbtn i:hover {
+    background: var(--purple-blc)
+}
+
+#check {
+    display: none;
+}
+
+section {
+    height: 50vh;
+    background-position: top;
+    background-size: cover;
+}
+
+/* ------>   Responsive  <------ */
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 25px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+     ul {
+        position: fixed; 
+        width: 100%;
+        height: 100vh;
+        background: var(--cyan-blc);
+        top: 80;
+        left: -100%;
+        padding-top: 1rem;
+        text-align: center;
+        transition: .5s ease;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 30px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a.active, a:hover {
+        background: none;
+        color: var(--blue);
+        text-shadow: 0 10px 15px var(--blue);
+    }
+
+    #check:checked ~  ul {
+        left: 0;
+        height: 100vh;
+    }
+
+    .box {
+        display: none;
+    }
+
+}
+
+@media (max-width: 294px) {
+    label.logo {
+        display: none;
+    }
+}
+
+@media (max-width: 858px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 2em;
+        background-color: #2196F3;
+        /*padding: 10px;*/
+        
+        margin: 2em 0;
+        padding: 3em 3em;
+        border: solid 1px #ccc;
+        border-radius: 6px;
+        min-width: 200px;
+        align-items: center;
+    }
+    .grid-item1 {
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        margin-left: 3em;
+        margin-right: 3em;
+        grid-area: 1 / 1
+      }
+    .grid-item2 {
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        margin-right: 3em;
+        margin-left: 3em;
+        grid-area: 2 / 1
+      }
+    .grid-item3 {
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        margin-left: 3em;
+        margin-right: 3em;
+        grid-area: 3 / 1
+      }
+    .grid-item4 {
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        margin-right: 3em;
+        margin-left: 3em;
+        grid-area: 4 / 1
+      }
+    .grid-item5 {
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        margin-left: 3em;
+        margin-right: 3em;
+        grid-area: 5 / 1
+      }
+    .grid-item6 {
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        margin-right: 3em;
+        margin-left: 3em;
+        grid-area: 6 / 1
+      }
+      .item21 {
+        grid-area: 7 / 1;
+        margin-right: 3em;
+        margin-left: 3em;
+      }
+      .item22 {
+        grid-area: 8 / 1;
+        margin-right: 3em;
+        margin-left: 3em;
+      }
+
+}
+
+/* ------>   Grid Layout  <------ */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 2em;
+    background-color:rgb(3, 60, 135);
+    /*padding: 10px;*/
+    
+    margin: 2em 0;
+    padding: 3em 3em;
+    border: solid 1px #ccc;
+    border-radius: 6px;
+    min-width: 200px;
+}
+
+.grid-item1 {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 3em;
+    background-color:rgb(53, 136, 245);
+  }
+.grid-item2 {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 3em;
+    background-color:rgb(53, 136, 245);
+  }
+.grid-item3 {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 3em;
+    background-color:rgb(53, 136, 245);
+  }
+.grid-item4 {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 3em;
+    background-color:rgb(53, 136, 245);
+  }
+.grid-item5 {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 3em;
+    background-color:rgb(53, 136, 245);
+  }
+.grid-item6 {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 3em;
+    background-color:rgb(53, 136, 245);
+  }
+
+p.prices {
+    font-size: 18px;
+}
+
+.item21 {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 3em;
+    background-color:rgb(53, 136, 245);
+}

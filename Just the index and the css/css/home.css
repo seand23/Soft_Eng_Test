@@ -1,0 +1,284 @@
+/* ------>   Root variables   <------ */
+:root {
+    --blue : #12d2db;
+    --white : #fcf2fa;
+    --purple : #912a7eaa;
+    --purple-blc : #230622dd;
+    --blc-cyan : #033a4d;
+    --cyan-blc : #0078a0;
+    --cyan-grey : rgb(12, 121, 121);
+    --shadow : o 5px 10px 5px rgba(0, 0, 0, .3);
+    --navColor : linear-gradient(to right, rgb(0, 221, 255)5%, rgba(6, 22, 35, 0.9));
+    --footerColor : linear-gradient(to right, rgb(0, 221, 255)5%, rgba(6, 22, 35, 0.9));
+    --prompt1 : rgb(144, 226, 242);
+    --prompt2 : rgb(241, 216, 248);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #033a4d;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ------>   Responsive Menu   <------ */
+
+nav {
+    top: 0;
+    background: var(--navColor);
+    box-shadow: var(--shadow);
+    height: 80px;
+    width: 100%;
+    position: sticky;
+}
+
+label.logo {
+    color: var(--white);
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 80px;
+    letter-spacing: -1px;
+    font-weight: 800;
+    font-style: italic;
+    transition: .2s ease;
+    text-shadow: 3px 5px 20px #230622aa;
+}
+
+nav ul {
+    float: right;
+    margin-right: 80px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+}
+
+nav ul li a {
+    color: var(--white);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 13px;
+    text-transform: lowercase;
+}
+
+a.active, a:hover {
+    background: var(--purple-blc);
+    transition: .5s;
+}
+
+/* ------>   checkbutton   <------ */
+.checkbtn {
+    line-height: 80px;
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    margin-right: 40px;
+    display: display;
+}
+
+.checkbtn i {
+    color: var(--white);
+    padding: 5px;
+    border-radius: 10px;
+    transition: .5s ease;
+}
+
+.checkbtn i:hover {
+    background: var(--purple-blc)
+}
+
+#check {
+    display: none;
+}
+
+section {
+    height: 50vh;
+    background-position: top;
+    background-size: cover;
+}
+
+/* ------>   Responsive  <------ */
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 25px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+     ul {
+        position: fixed; 
+        width: 100%;
+        height: 100vh;
+        background: var(--cyan-blc);
+        top: 80px;
+        left: -100%;
+        padding-top: 1rem;
+        text-align: center;
+        transition: .5s ease;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 30px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a.active, a:hover {
+        background: none;
+        color: var(--blue);
+        text-shadow: 0 10px 15px var(--blue);
+    }
+
+    #check:checked ~  ul {
+        left: 0;
+        height: 100vh;
+    }
+
+    .box {
+        display: none;
+    }
+
+}
+
+@media (max-width: 294px) {
+    label.logo {
+        display: none;
+    }
+}
+
+@media (max-height: 604px) {
+    .box {
+        display: none;
+    }
+}
+
+@media (max-height: 376px) {
+    footer {
+        display: none;
+    }
+}
+
+/* --> Footer <-- */
+footer {
+    
+    position: absolute;
+    background: var(--footerColor);
+    height: 100px;
+    width: 100%;
+    font-weight: 800;
+    font-style: italic;
+    text-shadow: 3px 5px 20px #230622aa;
+}
+
+
+
+.item1 { 
+    padding: 7px 7px 7px;
+    border: 4px solid black;
+    border-radius: 20px;
+    grid-area: 1/ span 10;
+    background: #98e5e9;
+     
+}
+
+.item3 { 
+    padding: 20px 0;
+    border: 4px solid black;
+    border-radius: 20px;
+    grid-area: 2/ span 7;
+    background: #98e5e9;
+}
+
+.item4 { 
+    padding: 7px 7px 7px;
+    border: 4px solid black;
+    border-radius: 20px;
+    grid-area: 2/ span 3;
+    background: #98e5e9;
+}
+
+.item5 {
+    padding: 7px 7px 7px;
+    border: 4px solid black;
+    border-radius: 20px;
+    grid-area: 20/ span 10;
+    background: var(--footerColor);
+}
+.item6 {
+    padding: 7px 7px 7px;
+    border: 4px solid black;
+    grid-area: 3/ span 6;
+    background: pink;
+    border-radius: 20px;
+}
+.item7 {
+    padding: 7px 7px 7px;
+    border: 4px solid black;
+    border-radius: 20px;
+    grid-area: 3/ span 4;
+    background: rgb(240, 212, 216);
+}
+
+.item8 {
+    padding: 7px 7px 7px;
+    border: 4px solid black;
+    border-radius: 20px;
+    grid-area: 4 / span 4;
+    background: rgb(230, 229, 159);
+}
+
+.item9 {
+    padding: 7px 7px 7px;
+    border: 4px solid black;
+    border-radius: 20px;
+    grid-area: 4 / span 6;
+    background: rgb(245, 229, 135);
+}
+
+.item10{
+    padding: 7px 7px 7px;
+    border: 4px solid black;
+    border-radius: 20px;
+    grid-area: 7 / 5 / span 1 / span 3 ;
+    background: rgb(185, 66, 185);
+}
+
+.item11 {
+    padding: 7px 7px 7px;
+    border: 4px solid black;
+    border-radius: 20px;
+    grid-area: 8 / span 10;
+    background: rgb(184, 119, 197);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap: 10px;
+  background-color: #04678b;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  font-size: 23px;
+}

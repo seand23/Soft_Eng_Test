@@ -17,5 +17,5 @@ CREATE TABLE suits (
     brand VARCHAR(30) NOT NULL,
     name VARCHAR(20) NOT NULL,
     price FLOAT(10) NOT NULL,
-    image VARCHAR(50) NOT NULL,
+    image VARCHAR(50) NOT NULL
 );

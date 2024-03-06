@@ -55,14 +55,15 @@ function productFormHandler(){
     }
 }
 
-function addUser($name, $username, $email, $password, $address, $phone) {
+function addUser($firstname, $lastname, $username, $email, $password, $address, $phone) {
     $pdo = get_connection();
 
     //insert user into database
     //maybe password needs a special way of being put in???????
-    $query = "INSERT INTO users (name, username, email, password, address, phone) VALUES (:name, :username, :email, :password, :address, :phone)";
+    $query = "INSERT INTO users (firstname, lastname, username, email, password, address, phone) VALUES (:firstname, :lastname, :username, :email, :password, :address, :phone)";
     $stmt = $pdo->prepare($query);
-    $stmt->bindParam(':name', $name);
+    $stmt->bindParam(':firstname', $firstname);
+    $stmt->bindParam(':lastname', $lastname);
     $stmt->bindParam(':username', $username);
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':password', $password);
@@ -79,7 +80,8 @@ function userFormHandler(){
     //check if form is submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //retrieve form data
-        $name = $_POST['name'];
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
@@ -88,7 +90,7 @@ function userFormHandler(){
     
         //call the addProduct function
         //improve this with html and css this is just purely functional - SD
-        if (addUser($name, $username, $email, $password, $address, $phone)) {
+        if (addUser($firstname, $lastname, $username, $email, $password, $address, $phone)) {
             echo "User added successfully.";
         } else {
             echo "****Error**** Unable to add user.";

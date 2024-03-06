@@ -16,8 +16,11 @@ require 'layout/header.php';
     <form action="" method="post" name="Register_Form" class="form-signup">
         <h2 class="form-signin-heading">Please register</h2>
 
-        <label for="name" >Name</label>
-        <input name="name" type="name" id="name" class="form-control" placeholder="John" required autofocus>
+        <label for="firstname" >First Name</label>
+        <input name="firstname" type="firstname" id="firstname" class="form-control" placeholder="John" required autofocus>
+        
+        <label for="lastname" >Last Name</label>
+        <input name="lastname" type="lastname" id="lastname" class="form-control" placeholder="Doe" required autofocus>
 
         <label for="username" >Username</label>
         <input name="username" type="username" id="username" class="form-control" placeholder="Username" required autofocus>
@@ -33,8 +36,8 @@ require 'layout/header.php';
         <input name="address" type="address" id="address" class="form-control" placeholder="123 Main St" required>
 
         <div class="checkbox">
-        <label for="number">Number</label>
-        <input name="number" type="phone" id="number" class="form-control" placeholder="123-456-789" required>
+        <label for="phone">Number</label>
+        <input name="phone" type="phone" id="phone" class="form-control" placeholder="123-456-789" required>
 
         <div class="checkbox">
             <label>

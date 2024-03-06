@@ -7,7 +7,7 @@ $suits = get_suits();
 require 'layout/header.php';
 ?>
   <main>
-    <h2>Featured Suits</h2>
+    <h1>Featured Suits</h1>
     <div class="product-grid">
       <?php foreach ($suits as $testsuit) { ?>
       <!-- <img src="images/<?php //echo $testsuit['image'];?>" class="image"/> -->
@@ -19,6 +19,7 @@ require 'layout/header.php';
           <h2><?php echo $testsuit['productName']?></h2>
           <h2><?php echo $testsuit['price']?></h2>
           <h2><?php echo $testsuit['brandName']?></h2>
+          <button class="cartB">Add to Basket</button>
         </blockquote>
       </div>
       <?php }?>

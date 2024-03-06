@@ -6,6 +6,9 @@
     <title>Blanch Suits</title>
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/nav.css">
+    <link rel="stylesheet" href="style/slider.css">
+    <script src="/js/slider.js"></script>
+    
     
 </head>
 <body>
@@ -13,7 +16,7 @@
 <nav>
     <div class="search-bar">
     <input type="text" placeholder="Search...">
-    <button type="submit">Search</button>
+    <button type="searchB">Search</button>
     </div>
     <a href="index.php">Home</a>
     <a href="store.php">Store</a>

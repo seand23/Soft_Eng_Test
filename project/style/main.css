@@ -5,10 +5,10 @@ body {
     background-color: #d3d3d3;
 }
 
-.container {
+/*.container {
     width: 80%;
     margin: 0 auto;
-}
+}*/
 
 header {
     background-color: #d3d3d3;
@@ -16,7 +16,7 @@ header {
     padding: 20px 0;
 }
 
-.featured-suits{
+/*.featured-suits{
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
@@ -27,13 +27,13 @@ header {
     max-width: 100%;
     height: auto;
     display: block;
-}
+}*/
 
-    .filter {
+    /*.filter {
     float: left;
     width: 20%;
     padding: 10px;
-}
+}*/
 .product-grid {
     display: flex;
     flex-wrap: wrap;
@@ -42,9 +42,23 @@ header {
 .product {
     width: 30%;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border-radius: 20px;
+    border: 5px solid black;
     padding: 10px;
+    background-color:lightblue;
 }
+
+.cartB {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    background-color: coral;
+    color: black;
+}
+
+.cartB:hover{
+    text-decoration: underline;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -63,9 +77,17 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
 }
+
+h3{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 label {
     font-weight: bold;
 }
+
 input[type="text"],
 input[type="number"] {
     width: 100%;
@@ -75,6 +97,7 @@ input[type="number"] {
     border-radius: 4px;
     box-sizing: border-box;
 }
+
 input[type="submit"] {
     width: 100%;
     padding: 10px;
@@ -85,6 +108,10 @@ input[type="submit"] {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 input[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+
+

@@ -1,5 +1,6 @@
 <?php
 include 'db_connection.php';
+
 session_start();
 function get_suits($limit = null){
     $pdo = get_connection();

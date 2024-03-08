@@ -1,5 +1,5 @@
 <?php
-include 'functions.php';
+require 'db_connection.php';
 class user{
     private $firstname;
     private $lastname;

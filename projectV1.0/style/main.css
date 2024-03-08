@@ -11,48 +11,75 @@
         padding: 20px 0;
     }
 
-    .product-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .product {
-        width: 30%;
-        margin-bottom: 20px;
-        border-radius: 20px;
-        border: 2px solid #ccc;
-        padding: 20px;
-        background-color: #f9f9f9;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-        transition: box-shadow 0.3s ease; /* Add smooth transition */
-    }
-
-    .product:hover {
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-    }
-
-    .product img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
-
-    .product h2 {
-        font-size: 1.2em;
-        margin-bottom: 10px;
-    }
-
-    .product p {
-        font-size: 1em;
-        margin-bottom: 10px;
-    }
-
-    .product .price {
-        font-size: 1.2em;
-        font-weight: bold;
-        color: #009688;
-    }
+.container {
+    display: flex;
+  }
+  
+  .filter-option {
+    margin-bottom: 20px;
+  }
+  
+  .filter-option h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .filter-option select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .filter-option select:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .filter-option select option {
+    padding: 10px;
+  }
+  
+  .product-grid {
+    flex: 3;
+    padding: 20px;
+  }
+  
+  .product {
+    width: 48%; /* Two items per row with a small gap */
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-right: 2%; /* Small gap between items */
+    margin-bottom: 20px; /* Spacing between rows */
+    float: left;
+  }
+  
+  .cartB {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px; /* Adjust button spacing */
+    cursor: pointer;
+  }
+  
+  /* Clearfix for float elements */
+  .product-grid:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
 
     .cartB {

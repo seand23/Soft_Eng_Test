@@ -21,7 +21,7 @@
     </div>
     <a href="index.php">Home</a>
     <a href="store.php">Store</a>
-    <a href="addproduct.php">Contact</a>
+    <a href="#">Contact</a>
     <div class="login">
     <button><a href="login.php">LOGIN</a></button>
     <button><a href="signup.php">REGISTER</a></button>

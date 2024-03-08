@@ -4,8 +4,14 @@ require 'lib/functions.php';
 ?>
  
     <main>
-        <div class="container">
-            <h1>Hello <?php echo $_SESSION['username']; ?>!</h1>
+    <?php if(isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+    echo "<h1>Hello $username!</h1>";
+    } else {
+    echo "<h1>Hello Guest!</h1>";
+    }
+    ?>
+
             <section class="featured-items">
                 <h3>Hot Suits Today!</h3>
                     <div class="slideshow-container">
@@ -36,7 +42,6 @@ require 'lib/functions.php';
                         </div>
                     </div>
             </section>
-        </div>
     </main>
 
 <?php

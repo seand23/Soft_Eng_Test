@@ -1,7 +1,7 @@
 <?php
-require 'lib/user.php';
-    $user = new user();
-    $user->userLogin();
+require 'lib/admin.php';
+    $admin = new admin();
+    $admin->handleLogin();
 ?>
 
 <?php
@@ -14,14 +14,22 @@ require 'layout/header.php';
 
 <body>
 <div class="container">
-    <form action="" method="post" name="Login_Form" class="form-signin">
-        <h2 class="form-signin-heading">Please sign in</h2>
+<form action="" method="post" name="Login_Form" class="form-signin">
+        <h2 class="form-signin-heading">Sign in</h2>
 
-        <label for="username" >Username</label>
+        <label for="username">Username</label>
         <input name="username" type="username" id="username" class="form-control" placeholder="Username" required autofocus>
 
         <label for="password">Password</label>
         <input name="password" type="password" id="password" class="form-control" placeholder="Password" required>
+
+        <div class="form-group">
+            <label for="loginType">Login as:</label>
+            <select class="form-control" id="loginType" name="loginType">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+        </div>
 
         <div class="checkbox">
             <label>

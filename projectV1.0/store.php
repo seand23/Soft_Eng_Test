@@ -7,7 +7,48 @@ $suits = get_suits();
 require 'layout/header.php';
 ?>
   <main>
-    <h1>Featured Suits</h1>
+  <div class="container">
+  <aside class="filter">
+  <h2>Filter Options</h2>
+  <div class="filter-option">
+    <h3>Color</h3>
+    <select name="color">
+      <option value="">Any</option>
+      <option value="black">Black</option>
+      <option value="blue">Blue</option>
+      <option value="gray">Gray</option>
+      <!-- Add more color options as needed -->
+    </select>
+  </div>
+  <div class="filter-option">
+    <h3>Size</h3>
+    <select name="size">
+      <option value="">Any</option>
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">Large</option>
+      <!-- Add more size options as needed -->
+    </select>
+  </div>
+  <div class="filter-option">
+    <h3>Tailored</h3>
+    <select name="tailored">
+      <option value="">Any</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  </div>
+  <div class="filter-option">
+    <h3>Brand</h3>
+    <select name="brand">
+      <option value="">Any</option>
+      <option value="brand1">Brand 1</option>
+      <option value="brand2">Brand 2</option>
+      <option value="brand3">Brand 3</option>
+      <!-- Add more brand options as needed -->
+    </select>
+  </div>
+</aside>
     <div class="product-grid">
       <?php foreach ($suits as $testsuit) { ?>
       <!-- <img src="images/<?php //echo $testsuit['image'];?>" class="image"/> -->

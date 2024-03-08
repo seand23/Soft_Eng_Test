@@ -19,12 +19,34 @@ require 'layout/header.php';
           <h2><?php echo $testsuit['productName']?></h2>
           <h2><?php echo $testsuit['price']?></h2>
           <h2><?php echo $testsuit['brandName']?></h2>
-          <button class="cartB">Add to Basket</button>
+          <button class="cartB" onclick="addToCart('<?php echo $testsuit['productName']?>', <?php echo $testsuit['price']?>)">Add to Basket</button>
         </blockquote>
       </div>
       <?php }?>
     </div>
   </main>
+
+  <!-- Cart Popup -->
+  <div id="cartPopup" style="display: none;">
+    <h2>Cart</h2>
+    <table id="cartItems">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="cartItemsBody">
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td id="totalPrice">0</td>
+            </tr>
+        </tfoot>
+    </table>
+    <button onclick="closeCart()">Close</button>
+  </div>
 
 <?php
 require 'layout/footer.php';

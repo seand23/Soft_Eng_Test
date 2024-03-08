@@ -5,35 +5,12 @@ body {
     background-color: #d3d3d3;
 }
 
-/*.container {
-    width: 80%;
-    margin: 0 auto;
-}*/
-
 header {
     background-color: #d3d3d3;
     color: #d3d3d3;
     padding: 20px 0;
 }
 
-/*.featured-suits{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.featured-suits img{
-    width: 48%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-}*/
-
-    /*.filter {
-    float: left;
-    width: 20%;
-    padding: 10px;
-}*/
 .product-grid {
     display: flex;
     flex-wrap: wrap;

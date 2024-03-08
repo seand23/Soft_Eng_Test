@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/nav.css">
     <link rel="stylesheet" href="style/slider.css">
-    <script src="/js/slider.js"></script>
+    <link rel="stylesheet" href="style/basket.css">
+
     
     
 </head>

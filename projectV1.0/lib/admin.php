@@ -16,16 +16,15 @@ class admin extends user{
         }
     }
 
-    function addProduct($productName, $price, $brandName, $supplierID) {
+    function addProduct($productName, $price, $brandName) {
         $pdo = get_connection();
     
         //insert product into database
-        $query = "INSERT INTO products (productName, price, brandName, supplierID) VALUES (:productName, :price, :brandName, :supplierID)";
+        $query = "INSERT INTO products (productName, price, brandName) VALUES (:productName, :price, :brandName)";
         $stmt = $pdo->prepare($query);
         $stmt->bindParam(':productName', $productName);
         $stmt->bindParam(':price', $price);
         $stmt->bindParam(':brandName', $brandName);
-        $stmt->bindParam(':supplierID', $supplierID);
     
         if ($stmt->execute()) {
             return true; //product added successfully
@@ -41,11 +40,10 @@ class admin extends user{
             $productName = $_POST['productName'];
             $price = $_POST['price'];
             $brandName = $_POST['brandName'];
-            $supplierID = $_POST['supplierID'];
         
             //call the addProduct function
             //improve this with html and css this is just purely functional - SD
-            if ($this->addProduct($productName, $price, $brandName, $supplierID)) {
+            if ($this->addProduct($productName, $price, $brandName)) {
                 echo "Product added successfully.";
             } else {
                 echo "****Error**** Unable to add product.";

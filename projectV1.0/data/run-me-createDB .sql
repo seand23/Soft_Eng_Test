@@ -8,30 +8,34 @@ drop table if exists products;
 drop table if exists admins;
 drop table if exists users;
 
-create table users (
-	userID int NOT NULL AUTO_INCREMENT,
-    firstname varchar(255),
-    lastname varchar(255),
-	username Varchar (255),
-    email Varchar(255),
-    password varchar(255),
-    address varchar (255),
-    phone varchar(255),
-    
-    primary key (userID)
+CREATE TABLE users (
+    userID INT NOT NULL AUTO_INCREMENT,
+    firstname VARCHAR(255),
+    lastname VARCHAR(255),
+    username VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255),
+    address VARCHAR(255),
+    phone VARCHAR(255),
+    PRIMARY KEY (userID)
 );
 
-create table admins (
-	adminID int NOT NULL AUTO_INCREMENT,
-    name varchar(255),
-	username Varchar (255),
-    email Varchar(255),
-    password varchar(255),
-    address varchar (255),
-    phone varchar(255),
-    
-    primary key (adminID)
+CREATE TABLE customers (
+    customerID INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255),
+    userID INT,
+    PRIMARY KEY (customerID),
+    FOREIGN KEY (userID) REFERENCES users(userID)
 );
+
+CREATE TABLE admins (
+    adminID INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255),
+    userID INT,
+    PRIMARY KEY (adminID),
+    FOREIGN KEY (userID) REFERENCES users(userID)
+);
+
 
 create table supplier (
 	supplierID int NOT NULL AUTO_INCREMENT,
@@ -47,7 +51,7 @@ create table products (
     productName varchar(255),
     price decimal (7,2),
     brandName varchar(255),
-    supplierID int NOT NULL,
+    supplierID int,
     
     
     primary key (productID),

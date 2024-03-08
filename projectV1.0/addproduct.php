@@ -21,10 +21,7 @@ require 'layout/header.php';
             <label for="brandName">Brand Name:</label><br>
             <input type="text" id="brandName" name="brandName" required><br>
 
-            <label for="suplierID">Supplier ID: (See notes for supplier ID's)</label><br>
-            <input type="text" id="supplierID" name="supplierID" required><br>
-
-            <!-- You may add more fields here for additional product information -->
+            <!-- add more fields here for additional product information -->
 
             <input type="submit" value="Add Product">
         </form>

@@ -47,7 +47,7 @@ create table products (
     productName varchar(255),
     price decimal (7,2),
     brandName varchar(255),
-    supplierID int NOT NULL,
+    supplierID int,
     
     
     primary key (productID),
@@ -61,11 +61,9 @@ create table orders (
     totalPrice decimal (7,2),
     datePurchase timestamp,
     userId int,
-    adminID int,
     
     primary key (orderID),
-    foreign key (userID) references users (userID),
-    foreign key (adminID) references admins (adminID)
+    foreign key (userID) references users (userID)
 );
 
 -- Sample data for users table
@@ -95,8 +93,10 @@ VALUES
     (3, 1, 2, 'Product3', 39.99, 'Brand3', 3);
 
 -- Sample data for orders table
-INSERT INTO orders (orderID, totalPrice, datePurchase, userID, adminID)
+INSERT INTO orders (orderID, totalPrice, datePurchase, userID)
 VALUES 
-    (1, 49.98, '2024-02-28 15:30:00', 1, 1),
-    (2, 29.99, '2024-02-29 10:45:00', 2, 1);
+    (1, 49.98, '2024-02-28 15:30:00', 1),
+    (2, 29.99, '2024-02-29 10:45:00', 2);
+    
+    select * from products;
 

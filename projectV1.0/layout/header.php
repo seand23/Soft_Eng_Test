@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blanch Suits</title>
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/nav.css">
-    <link rel="stylesheet" href="style/slider.css">
-    <link rel="stylesheet" href="style/basket.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style/slider.css">
+    <link rel="stylesheet" href="./style/basket.css">
 
     
     
@@ -21,7 +21,7 @@
     </div>
     <a href="index.php">Home</a>
     <a href="store.php">Store</a>
-    <a href="admin.php">Contact</a>
+    <a href="addproduct.php">Contact</a>
     <div class="login">
     <button><a href="login.php">LOGIN</a></button>
     <button><a href="signup.php">REGISTER</a></button>

@@ -1,6 +1,7 @@
 <?php
-require 'lib/functions.php';
-    userLogin();
+require 'lib/user.php';
+    $user = new user();
+    $user->userLogin();
 ?>
 
 <?php

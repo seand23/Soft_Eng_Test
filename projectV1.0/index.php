@@ -12,27 +12,27 @@ require 'lib/functions.php';
 
                         <div class="mySlides fade">
                             <div class="numbertext">1 / 5</div>
-                            <img src="images/boss.jpg" style="width:50%">
+                            <a href="store.php"><img src="images/boss.jpg" style="width:50%"></a>    
                         </div>
 
                         <div class="mySlides fade">
                             <div class="numbertext">2 / 5</div>
-                            <img src="images/CK.jpg" style="width:50%">
+                            <a href="store.php"><img src="images/CK.jpg" style="width:50%"></a>  
                         </div>
 
                         <div class="mySlides fade">
                             <div class="numbertext">3 / 5</div>
-                            <img src="images/gucci.jpg" style="width:50%">
+                            <a href="store.php"><img src="images/gucci.jpg" style="width:50%"></a>   
                         </div>
 
                         <div class="mySlides fade">
                             <div class="numbertext">4 / 5</div>
-                            <img src="images/tedBaker.jpg" style="width:50%">
+                            <a href="store.php"><img src="images/tedBaker.jpg" style="width:50%"></a>    
                         </div>
 
                         <div class="mySlides fade">
                             <div class="numbertext">5 / 5</div>
-                            <img src="images/tommy.jpg" style="width:50%">
+                            <a href="store.php"><img src="images/tommy.jpg" style="width:50%"></a>   
                         </div>
                     </div>
             </section>

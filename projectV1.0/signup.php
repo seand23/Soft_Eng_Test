@@ -1,6 +1,7 @@
 <?php
-require 'lib/functions.php';
-    userFormHandler();
+require 'lib/user.php';
+    $user = new user();
+    $user->userFormHandler();
 ?>
 
 <?php

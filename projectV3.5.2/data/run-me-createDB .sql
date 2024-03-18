@@ -31,11 +31,6 @@ CREATE TABLE customers (
 CREATE TABLE admins (
     adminID INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(255),
-    username VARCHAR(255),
-    email VARCHAR(255),
-    password VARCHAR(255),
-    address VARCHAR(255),
-    home VARCHAR(255),
     userID INT,
     PRIMARY KEY (adminID),
     FOREIGN KEY (userID) REFERENCES users(userID)

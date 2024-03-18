@@ -35,11 +35,11 @@ CREATE TABLE admins (
     email VARCHAR(255),
     password VARCHAR(255),
     address VARCHAR(255),
-    home VARCHAR(255),
     userID INT,
     PRIMARY KEY (adminID),
     FOREIGN KEY (userID) REFERENCES users(userID)
 );
+
 
 
 create table supplier (
@@ -82,10 +82,10 @@ VALUES
     (2, 'Jane', 'Smith', 'jane_smith', 'jane@example.com', 'pass123', '456 Elm St, Town', '987-654-3210');
 
 -- Sample data for admins table
-INSERT INTO admins (adminID, name, username, email, password, address, phone)
+INSERT INTO admins (adminID, username, email, password, address)
 VALUES 
-    (1, 'Admin1', 'admin1', 'admin1@example.com', 'adminpass', '789 Oak St, Village', '555-123-4567'),
-    (2, 'Admin2', 'admin2', 'admin2@example.com', 'adminpass2', '321 Maple St, County', '555-987-6543');
+    (1, 'admin1', 'admin1@example.com', 'adminpass', '789 Oak St, Village'),
+    (2, 'admin2', 'admin2@example.com', 'adminpass2', '321 Maple St, County');
 
 -- Sample data for supplier table
 INSERT INTO supplier (supplierID, companyName)
@@ -102,8 +102,11 @@ VALUES
     (3, 1, 2, 'Product3', 39.99, 'Brand3', 3);
 
 -- Sample data for orders table
-INSERT INTO orders (orderID, totalPrice, datePurchase, userID, adminID)
+INSERT INTO orders (orderID, totalPrice, datePurchase, userID)
 VALUES 
-    (1, 49.98, '2024-02-28 15:30:00', 1, 1),
-    (2, 29.99, '2024-02-29 10:45:00', 2, 1);
+    (1, 49.98, '2024-02-28 15:30:00', 1),
+    (2, 29.99, '2024-02-29 10:45:00', 2);
+    
+    
+    select * from orders;	
 

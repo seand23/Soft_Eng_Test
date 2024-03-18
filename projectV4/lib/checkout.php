@@ -1,7 +1,4 @@
 <?php
-
-require '../lib/config/db_connection.php';
-
 // class Checkout{
 //     function sendOrderToDB(){
 //         //take order in as an object ///not done
@@ -13,14 +10,13 @@ require '../lib/config/db_connection.php';
 
 
 //*** Orders in the database, I think we should remove the adminID from the foreign key but Idrk what logic we should use ***/
-class Checkout {
-    function sendOrderToDB($orderID, /*$totalPrice,*/ $datePurchase, $userID){
+class Checkout extends Order{
+    function sendOrderToDB($totalPrice, $datePurchase, $userID){
         try {
         $pdo = get_connection();
-        $query ="INSERT INTO orders (orderID, /*totalPrice, */datePurchase, userID) VALUES (:orderID, :totalPrice, :datePurchase, :userID)";
+        $query ="INSERT INTO orders (totalPrice, datePurchase, userID) VALUES (:totalPrice, :datePurchase, :userID)";
         $stmt = $pdo -> prepare($query);
-        $stmt->bindParam(':orderID', $orderID);
-        // $stmt->bindParam(':totalPrice', $totalPrice); don't do this yet
+        $stmt->bindParam(':totalPrice', $totalPrice);
         $stmt->bindParam(':datePurchase', $datePurchase);
         $stmt->bindParam(':userID', $userID);
 
@@ -38,5 +34,3 @@ class Checkout {
     }
 }
 }
-
-?>

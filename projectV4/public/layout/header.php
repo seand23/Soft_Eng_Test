@@ -24,6 +24,6 @@
     <div class="login">
     <button><a href="login.php">LOGIN</a></button>
     <button><a href="signup.php">REGISTER</a></button>
-    <button><a href="checkout.php">Cart</a></button>
+    <button><a href="ship.php">Cart</a></button>
     </div>
 </nav>

@@ -1,14 +1,19 @@
 <?php
 require '../lib/user/admin.php';
-    $admin = new admin();
-    $admin->handleProducts($admin);
+$admin = new admin();
+$admin->handleProducts($admin);
+if ($_SESSION['admin'] == false) {
+    header("location:login-register.php");
+    exit;
+}
 ?>
 
 <?php
 require 'layout/header.php';
 ?>
+
 <body>
-<div class="admin-panel">
+    <div class="admin-panel">
         <div class="add-product">
             <h1>Add Product</h1>
             <form action="addproduct.php" method="POST">
@@ -26,21 +31,20 @@ require 'layout/header.php';
         </div>
 
 
-    <div class="add-product">
-    <h1>Delete Product</h1>
-    <form action="addproduct.php" method="POST">
-        <label for="productName">Product Name:</label><br>
-        <input type="text" id="productName" name="productName" required><br>
+        <div class="add-product">
+            <h1>Delete Product</h1>
+            <form action="addproduct.php" method="POST">
+                <label for="productName">Product Name:</label><br>
+                <input type="text" id="productName" name="productName" required><br>
 
-        <label for="brandName">Brand Name:</label><br>
-        <input type="text" id="brandName" name="brandName" required><br>
+                <label for="brandName">Brand Name:</label><br>
+                <input type="text" id="brandName" name="brandName" required><br>
 
-        <input type="submit" name="deleteProduct" value="Delete Product">
-    </form>
-</div>
+                <input type="submit" name="deleteProduct" value="Delete Product">
+            </form>
+        </div>
     </div>
 </body>
 <?php
 require 'layout/footer.php';
 ?>
-

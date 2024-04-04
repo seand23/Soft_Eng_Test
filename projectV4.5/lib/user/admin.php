@@ -81,6 +81,7 @@ class Admin extends User{
                 //verify the submitted password with the password from the database
                 if ($password === $admin['password']) {
                     $_SESSION['admin_username'] = $username;
+                    $_SESSION['admin'] = true;
                     header("location:addproduct.php");
                     exit;//stop running code when redirect
                 } else {

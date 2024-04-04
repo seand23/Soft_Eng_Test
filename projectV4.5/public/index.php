@@ -6,14 +6,16 @@ require '../lib/functions.php';
     <main>
     <?php if(isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
-    echo "<h1>Hello $username!</h1>";
+    echo "<div class='centered-text'><h1>Hello $username!</h1></div>";
     } else {
-    echo "<h1>Hello Guest!</h1>";
+    echo "<div class='centered-text'><h1>Hello Guest!</h1></div>";
     }
     ?>
+    <h2>y</h2>
+    <h2>y</h2>
 
             <section class="featured-items">
-                <h3>Hot Suits Today!</h3>
+                <div class='hotsuits'><h3>Hot Suits Today!</h3></div>
                     <div class="slideshow-container">
 
                         <div class="mySlides fade">

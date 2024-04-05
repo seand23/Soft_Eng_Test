@@ -7,7 +7,7 @@ img {
 }
 
 /* Slideshow container */
-.slideshow-container {
+.slideshow1-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
@@ -15,28 +15,20 @@ img {
 }
 
 
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-
-  .active {
+  .slideshow1 .active {
     background-color: #717171;
   }
 
-  .mySlides {
+  .slideshow1 .mySlides {
     display: none;
 }
-  .mySlides img {
+.slideshow1 .mySlides img {
     width: 48%;
     margin:0 2% 
   }
   
   /* Fading animation */
-  .fade {
+  .slideshow1 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
   }
@@ -50,3 +42,71 @@ img {
   @media only screen and (max-width: 300px) {
     .text {font-size: 11px}
   }
+
+  .slideshow2-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slideshow2 .mySlide {
+    display: none;
+}
+
+.slideshow2 .prev,
+.slideshow2 .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.slideshow2 .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.slideshow2 .prev:hover,
+.slideshow2 .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.slideshow2 .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.slideshow2 .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.slideshow2 .active,
+.slideshow2 .dot:hover {
+    background-color: #717171;
+}
+
+.slideshow2 .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}

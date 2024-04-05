@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/nav.css">
     <link rel="stylesheet" href="./style/slider.css">
+    <link rel="stylesheet" href="./style/slider2.css">
 
     
 </head>

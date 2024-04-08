@@ -4,6 +4,8 @@ class User{
     function addUser($firstname, $lastname, $username, $email, $password, $address, $phone) {
         $pdo = get_connection();
     
+
+        
         //insert user into database
         $query = "INSERT INTO users (firstname, lastname, username, email, password, address, phone) VALUES (:firstname, :lastname, :username, :email, :password, :address, :phone)";
         $stmt = $pdo->prepare($query);

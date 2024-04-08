@@ -12,22 +12,20 @@ $checkout -> sendOrderToDB();
 $user = new User();
 $userId = $user->getUserIdByUsername($username);
 
-
-if ($userId !== null) {
-    echo "User ID: " . $userId;
-} else {
-    echo "User not found.";
+if ($_SESSION['username'] == false) {
+    header("location:login-register.php");
+    exit;
 }
 
 
 ?>
 <?php require_once 'layout/header.php'; ?>
 <main>
-    <h1>CHECKOUT TEST</h1>
+    <h1>Your Cart:</h1>
     <?php $order -> displayCartItems() ?>
 
     <body>
-        <form action="" method="POST" name="checkout">
+        <form action="confirmation.php" method="post" name="checkout">
         <?php
     if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
         foreach ($_SESSION['cart'] as $productId => $item) {
@@ -39,7 +37,7 @@ if ($userId !== null) {
         }
     }
     ?>
-            <button type="submit">Confirm purchase</button>
+            <button type="submit" class="button">Confirm purchase</button>
         </form>
     </body>
 </main>

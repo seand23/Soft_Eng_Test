@@ -1,0 +1,49 @@
+nav {
+    background-color: #333;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 auto; /* This centers the div horizontally */
+    color: #d3d3d3;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: left;
+} 
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 15px;
+}
+
+.search-bar button {
+    padding: 8px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer; 
+    width: 150px; 
+    height: 33px;  
+}
+
+.login button{
+    border-radius: 15px;
+    background-color: #333;
+    text-decoration: none;
+}
+
+
+

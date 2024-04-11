@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow1-container {
+  overflow: hidden; /* Hide any overflow */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+
+  .slideshow1 .active {
+    background-color: #717171;
+  }
+
+  .slideshow1 .mySlides {
+    display: none;
+}
+.slideshow1 .mySlides img {
+    width: 100%
+  }
+  
+  /* Fading animation */
+  .slideshow1 .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+
+  .slideshow2-container {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshow2 .mySlide {
+    display: none;
+}
+
+.prev {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 319px; /* Adjust the distance from the left edge */
+  transform: translateY(-50%);
+  padding: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px 0 0 3px;
+  user-select: none;
+  background-color: white;
+  color: #717171;
+}
+
+
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 318px; /* Adjust the distance from the right edge */
+  transform: translateY(-50%);
+  padding: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: white;
+  color: #717171;
+}
+
+.slideshow2 .active {
+    background-color: #717171;
+}
+
+.slideshow2 .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}

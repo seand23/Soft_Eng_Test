@@ -37,6 +37,7 @@ textarea {
   max-width: 768px;
   margin: 60px auto;
   position: relative;
+  background-color: white;
 }
 
 form {

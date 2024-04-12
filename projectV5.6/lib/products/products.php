@@ -81,7 +81,7 @@ class Products {
     echo '<div class="product-grid">';
     foreach ($suits as $suit) {
         $suits = $this->get_suits();
-        echo '<div class="product">';
+        echo '<div class="filter-product">';
         echo '  <blockquote>';
         echo '  <img src="' . $suit['imageURL'] . '" alt="' . $suit['productName'] . '">';
         echo '    <h2>' . $suit['productName'] . '</h2>';

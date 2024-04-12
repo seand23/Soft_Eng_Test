@@ -74,6 +74,7 @@ require 'layout/header.php';
       </form>
       </div>
     </aside>
+    <div class="filteredSuites">
     <?php
                 $filters = [
                   'colors' => isset($_GET['colors']) ? $_GET['colors'] : "",
@@ -83,6 +84,7 @@ require 'layout/header.php';
               ];
     $general->displayFilteredSuits($filters)
     ?>
+    </div>
     </main>
     <?php
     require 'layout/footer.php';

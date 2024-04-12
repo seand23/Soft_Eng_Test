@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Optional: Prevent horizontal scrollbar */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed; /* Fixed position for full viewport coverage */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+
+.holder {
+  display: flex;
+}
+
+.filter-option {
+  margin-bottom: 20px;
+  background-color: rgb(102, 102, 102);
+}
+
+.filter-option h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.filter-option select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 14px;
+}
+
+.filter-option select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.filter-option select option {
+  padding: 10px;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.product {
+  width: 50vh;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 14px;
+  color: #5f5f5f;
+  margin-bottom: 10px;
+}
+
+.product .price {
+  font-size: 16px;
+  color: #007bff;
+}
+
+.product .cartB, .cartB-rem {
+  display:block;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.product .cartB:hover {
+  background-color: #17921f;
+  opacity: 75%;
+}
+
+.product .cartB-rem:hover {
+  background-color: #a10000;
+  opacity: 75%;
+}
+
+.admin-panel {
+  position: sticky;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 430px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  max-height: 80vh;
+}
+
+.centered-text {
+  text-align: center;
+  position: absolute;
+  color: white;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hotsuits{
+text-align: center;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.form .button {
+  color: #fff;
+  background: var(--grey);
+  /* background: #009579; */
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 1.7rem;
+  cursor: pointer;
+  transition: 0.4s;
+  border: none;
+  border-radius: 6px;
+  padding: 0 20px;
+  height: 60px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.note {
+  position: fixed;
+  top: 50%;
+  right: 20px; /* Adjust this value according to your layout */
+  transform: translateY(-50%);
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 20px;
+  max-width: 300px; /* Adjust this value as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  text-align: center;
+}
+.note2 {
+  position: absolute;
+  top: 40%;
+  left: 100px; /* Adjust this value according to your layout */
+  transform: translateY(-50%);
+  padding: 20px;
+  max-width: 400px; /* Adjust this value as needed */
+  z-index: 9999;
+  text-align: center;
+}
+
+.note h1 {
+  margin: 0;
+  font-size: 14px;
+}
+.note2 h1 {
+  margin: 0;
+  font-size: 26px;
+  color: white;
+}
+
+.note2 p{
+  margin: 0;
+  font-size: 18px;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .product {
+    width: calc(50% - 40px); /* Two products per row with margins */
+    margin: 20px;
+  }
+
+  .centered-text, .hotsuits {
+    margin-bottom: 0; /* Remove margin for larger screens */
+  }
+}
+
+.newStock h3{
+  text-align: center;
+  color: white;
+}

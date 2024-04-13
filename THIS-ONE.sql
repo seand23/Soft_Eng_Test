@@ -88,7 +88,8 @@ create table if not exists orders (
 INSERT INTO users (userID, firstname, lastname, username, email, password, address, phone)
 VALUES 
     (1, 'John', 'Doe', 'john_doe', 'john@example.com', 'password123', '123 Main St, City', '123-456-7890'),
-    (2, 'Jane', 'Smith', 'jane_smith', 'jane@example.com', 'pass123', '456 Elm St, Town', '987-654-3210');
+    (2, 'Jane', 'Smith', 'jane_smith', 'jane@example.com', 'pass123', '456 Elm St, Town', '987-654-3210'),
+    (3, 'Kelly', 'Jay', 'jj_s', 'j@example.com', 'pas123', '456 El]m St, Town', '987-456654-3210');
 
 -- Sample data for admins table
 INSERT INTO admins (adminID, name, username, email, password, address, phone)
@@ -104,11 +105,38 @@ VALUES
     (3, 'fuckknows.inc');
 
 -- Sample data for products table
-INSERT INTO products (productID, userID, adminID, productName, price, brandName, supplierID, colors, size)
+INSERT INTO products (productID, userID, adminID, productName, price, brandName, supplierID, colors, size, imageURL)
 VALUES 
-    (1, 1, 77, 'Product1', 19.99, 'Brand1', 1, 'black', 'L'),
-    (2, 2, 77, 'Product2', 29.99, 'Brand2', 2,   'blue', 'M'),
-    (3, 1, 772, 'Product3', 39.99, 'Brand3', 3,  'grey', 'S');
+    (1, 1, 77, 'Product1', 19.99, 'Brand1', 1, 'Black', 'L', './images/LOGO.jpg'),
+    (2, 2, 77, 'Product2', 29.99, 'Brand2', 2,   'Blue', 'M', './images/LOGO.jpg'),
+    (3, 1, 772, 'Product3', 39.99, 'Brand3', 3,  'Grey', 'S', './images/LOGO.jpg'),
+    (4, 3, 772, '3 Piece', 59.99, 'Hugo Boss', 1, 'Red', 'XL', './images/LOGO.jpg'),
+	(5, 2, 77, '2 Piece', 49.99, 'Armani', 2, 'Green', 'M', './images/LOGO.jpg'),
+	(6, 1, 77, '3 Piece', 79.99, 'Calvin Klein', 3, 'White', 'S', './images/LOGO.jpg'),
+	(7, 2, 77, '2 Piece', 69.99, 'Ted Baker', 2, 'Yellow', 'L', './images/LOGO.jpg'),
+	(8, 3, 77, '3 Piece', 89.99, 'Ralph Lauren', 3, 'Purple', 'XS', './images/LOGO.jpg'),
+    (9, 1, 77, '2 Piece', 49.99, 'Hugo Boss', 1, 'Black', 'M', './images/LOGO.jpg'),
+	(10, 2, 77, '3 Piece', 69.99, 'Armani', 2, 'Blue', 'L', './images/LOGO.jpg'),
+	(11, 1, 772, '2 Piece', 79.99, 'Calvin Klein', 3, 'Grey', 'S', './images/LOGO.jpg'),
+	(12, 2, 77, '3 Piece', 99.99, 'Ted Baker', 3, 'Green', 'XL', './images/LOGO.jpg'),
+	(13, 3, 77, '2 Piece', 59.99, 'Ralph Lauren', 2, 'Red', 'XS', './images/LOGO.jpg'),
+	(14, 1, 77, '3 Piece', 79.99, 'Hugo Boss', 1, 'White', 'M', './images/LOGO.jpg'),
+	(15, 2, 77, '2 Piece', 89.99, 'Armani', 2, 'Black', 'S', './images/LOGO.jpg'),
+	(16, 1, 772, '3 Piece', 109.99, 'Calvin Klein', 3, 'Blue', 'L', './images/LOGO.jpg'),
+	(17, 2, 77, '2 Piece', 69.99, 'Ted Baker', 1, 'Grey', 'XL', './images/LOGO.jpg'),
+	(18, 3, 77, '3 Piece', 119.99, 'Ralph Lauren', 1, 'Green', 'XS', './images/LOGO.jpg'),
+	(19, 1, 77, '2 Piece', 59.99, 'Hugo Boss', 1, 'Red', 'M', './images/LOGO.jpg'),
+	(20, 2, 77, '3 Piece', 79.99, 'Armani', 2, 'White', 'L', './images/LOGO.jpg'),
+	(21, 1, 772, '2 Piece', 99.99, 'Calvin Klein', 3, 'Black', 'S', './images/LOGO.jpg'),
+	(22, 2, 77, '3 Piece', 129.99, 'Ted Baker', 2, 'Blue', 'XL', './images/LOGO.jpg'),
+	(23, 3, 77, '2 Piece', 79.99, 'Ralph Lauren', 3, 'Grey', 'XS', './images/LOGO.jpg'),
+	(24, 1, 77, '3 Piece', 99.99, 'Hugo Boss', 1, 'Green', 'M', './images/LOGO.jpg'),
+	(25, 2, 77, '2 Piece', 109.99, 'Armani', 2, 'Red', 'S', './images/LOGO.jpg'),
+	(26, 1, 772, '3 Piece', 139.99, 'Calvin Klein', 3, 'White', 'L', './images/LOGO.jpg'),
+	(27, 2, 77, '2 Piece', 79.99, 'Ted Baker', 2, 'Black', 'XL', './images/LOGO.jpg'),
+	(28, 3, 77, '3 Piece', 149.99, 'Ralph Lauren', 1, 'Blue', 'XS', './images/LOGO.jpg');
+
+
     
     
 -- delete from products;

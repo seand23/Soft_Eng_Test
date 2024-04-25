@@ -15,15 +15,13 @@ require '../lib/functions.php';
 <div class='note2'>
     <h1>Welcome to Blanch Suits</h1>
     <br>
-    <p>You can browse our website to find the best suit for you at a great pirce!
-        Are you looking for a new tailored or branded suit to enhance your style? Blanch suits has the answer!.
-        We have fully customisable stylish suits at the click of a button!. If you are looking for just a branded suit 
-        we have that also. you can find all these stylish suits on our store page.
+    <p>Click/Tap the image to browse suits now!
     </p>
 </div>
 
-    <p><a href="store.php"> hello world </a></p>
-
+<div class="click-me">
+    <p><a href="store.php">HOT SUITS! --></a></p>
+</div>
 
     <div class="slideshow1-container">
 

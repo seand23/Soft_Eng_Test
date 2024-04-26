@@ -1,0 +1,116 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar Styles */
+.topnav {
+    overflow: hidden;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.topnav .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.topnav .menu {
+    flex: 1;
+    text-align: center;
+}
+
+.topnav .menu a {
+    color: #fff;
+    background-color: #555;
+    text-decoration: none;
+    padding: 10px 20px; /* Increased padding for more space */
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent; /* Remove grey bar */
+}
+
+.topnav .menu a:hover {
+    background-color: #555;
+    border-bottom: 2px solid #fff; /* Add border on hover */
+}
+
+.topnav .search-bar {
+    flex: 1;
+    text-align: center;
+}
+
+.topnav .search-bar input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.topnav .search-bar button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #04AA6D;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.topnav .login, .topnav .cart {
+    text-align: center;
+    display: none; /* Hide login and cart initially */
+}
+
+.topnav .login a, .topnav .cart a {
+    background-color: transparent;
+    border: none;
+    color: #555;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.topnav .login, .topnav .cart {
+    text-align: center;
+    display: block; /* Ensure they are displayed on all screen sizes */
+}
+
+.topnav .menu, .topnav .search-bar {
+    display: block; /* Ensure they are displayed on all screen sizes */
+}
+@media screen and (max-width: 750px) {
+    .topnav .menu, .topnav .search-bar {
+        display: none;
+    }
+    
+    .topnav.responsive .menu, .topnav.responsive .search-bar {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .topnav .icon {
+        display: block;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    .topnav.responsive .search-bar {
+        display: none;
+    }
+    
+
+}
+
+@media screen and (min-width: 751px) {
+    .topnav .icon {
+        display: none;
+    }
+}

@@ -1,16 +1,6 @@
 <?php
 require_once 'order.php';
-// class Checkout{
-//     function sendOrderToDB(){
-//         //take order in as an object ///not done
-//         //prepare sql statement "INSERT INTO ...." //done?
-//         //write order to db
-//         //give user confirmation //done
-//     }
-// }
-
-
-//*** Orders in the database, I think we should remove the adminID from the foreign key but Idrk what logic we should use ***/
+require_once '../lib/user/user.php';
 class Checkout extends Order{
 
         function sendOrderToDB(){
@@ -19,18 +9,6 @@ class Checkout extends Order{
         // Check if the user is logged in and if the cart is not empty
         if (!isset($_SESSION['username']) || empty($_SESSION['username']) || !isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
             echo "Invalid user or empty cart.";
-            return false;
-        }
-        // Get the username from the session
-        $username = $_SESSION['username'];
-
-        // Get the user ID from the username
-        $user = new User();
-        $userID = $user->getUserIdByUsername($username);
-
-        // Check if the user ID exists
-        if ($userID === null) {
-            echo "User ID not found.";
             return false;
         }
 

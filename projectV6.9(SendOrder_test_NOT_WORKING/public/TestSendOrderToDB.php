@@ -7,7 +7,7 @@ function testSendOrderToDB() {
     $datePurchase = "2024-04-26 12:00:00"; // Hardcoded date and time for testing
     $userID = 3;
 
-    $result = $order->sendOrderToDB($totalPrice, $datePurchase, $userID);
+    $result = $order->sendOrderToDB();
 
     // Display the test result
     echo "{Total: $totalPrice, Date is: $datePurchase, User ID: $userID}";
@@ -16,4 +16,3 @@ function testSendOrderToDB() {
 
 // Call the test function
 testSendOrderToDB();
-?>
